@@ -26,7 +26,7 @@ public class AuthUser {
 
         //following try catch block initializes firebase SDK and imports Service account credentials from PC
         try {
-            serviceAccount = new FileInputStream("C:\\Users\\Kunal\\Downloads\\firebase_PK.json");
+            serviceAccount = new FileInputStream("~/firebase_PK.json");
             options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .setDatabaseUrl("https://bugtrackerkunal.firebaseio.com")
