@@ -2,17 +2,21 @@ package com.kunal.Football_App_Server;
 
 public class Test {
     private final String loginMsg;
-    private final String uid;
+    private String uid;
 
     public Test(String token) {
-        //check if given ID Token is valid
-        AuthUser user=new AuthUser(token);
-        uid=user.authorize();
-        if(uid==null) {
+        if(token==null || token=="") {
             loginMsg="failed login";
         }
         else {
-            loginMsg="login successful";
+            //check if given ID Token is valid
+            AuthUser user = new AuthUser(token);
+            uid = user.authorize();
+            if (uid == null) {
+                loginMsg = "failed login";
+            } else {
+                loginMsg = "login successful";
+            }
         }
     }
 
