@@ -1,10 +1,10 @@
 package com.kunal.Football_App_Server;
 
-public class Test {
+public class Login {
     private final String loginMsg;
     private String uid;
 
-    public Test(String token) {
+    public Login(String token) {
         if(token==null || token=="") {
             loginMsg="failed login";
         }
